@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Related Surveys of A Survey on Interpretability in Visual Recognition</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e40af',
+                        secondary: '#0ea5e9',
+                        accent: '#4f46e5',
+                        dark: '#1e293b',
+                        light: '#f8fafc'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .rotate-text {
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+            text-orientation: mixed;
+        }
+
+        .table-container {
+            max-height: 600px;
+            overflow-y: auto;
+        }
+
+        .table-container::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        .table-container::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+
+        .table-container::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+
+        .table-container::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+
+        .sticky-header {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .scroll-indicator {
+            animation: bounce 1.5s infinite;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gradient-to-br from-gray-50 to-gray-100 min-h-screen font-sans">
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-primary to-accent text-white py-12 px-4">
+        <div class="max-w-7xl mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Related Surveys of</h1>
+            <h1 class="text-4xl md:text-5xl font-bold mb-8"><i>A Survey on Interpretability in Visual Recognition</i>
+            </h1>
+            <p class="text-xl max-w-4xl mx-auto opacity-90 mb-2">
+                Qiyang Wan, Chengzhi Gao, Ruiping Wang, Xilin Chen
+            </p>
+            <p class="text-base max-w-4xl mx-auto opacity-90 italic">
+                Institute of Computing Technology, Chinese Academy of Sciences
+            </p>
+            <p class="text-base max-w-4xl mx-auto opacity-90 italic">
+                University of Chinese Academy of Sciences
+            </p>
+            <div class="mt-8 flex justify-center">
+                <div class="flex flex-col items-center">
+                    <span class="text-sm mb-2 opacity-80">Scroll down to explore literature tables</span>
+                    <div class="scroll-indicator">
+                        <i class="fas fa-chevron-down text-2xl"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Introduction Section -->
+    <section class="py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="bg-white rounded-xl shadow-lg p-6 mb-8">
+                <h2 class="text-2xl font-bold text-primary mb-4">Overview</h2>
+                <p class="text-gray-700 mb-4">
+                    This page summarizes the related surveys of <i>A Survey on Interpretability in Visual
+                        Recognition</i>, organized into three main categories:
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="border-l-4 border-primary pl-4 py-2">
+                        <h3 class="font-bold text-lg text-dark mb-2">Generic AI Models</h3>
+                        <p class="text-gray-600">XAI techniques, classification methods, evaluation metrics, and future
+                            challenges for various AI models</p>
+                    </div>
+                    <div class="border-l-4 border-secondary pl-4 py-2">
+                        <h3 class="font-bold text-lg text-dark mb-2">Vision-Related Fields</h3>
+                        <p class="text-gray-600">XAI research in visual tasks, visualization techniques, architectures,
+                            multimodal models, and reinforcement learning</p>
+                    </div>
+                    <div class="border-l-4 border-accent pl-4 py-2">
+                        <h3 class="font-bold text-lg text-dark mb-2">Vision Applications</h3>
+                        <p class="text-gray-600">Applications of XAI in medical imaging, industrial manufacturing, smart
+                            cities, and cybersecurity</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Table 1: Generic AI Models -->
+    <section class="py-8 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="bg-gradient-to-r from-primary to-blue-700 px-6 py-4">
+                    <h2 class="text-2xl font-bold text-white">Table 1: XAI Surveys on Generic AI Models</h2>
+                    <p class="text-blue-100 mt-1">Summary and comparison of recent XAI surveys on Generic AI Models</p>
+                </div>
+                <div class="table-container p-4">
+                    <table class="min-w-full border-collapse">
+                        <thead class="sticky-header bg-gray-100">
+                            <tr>
+                                <th
+                                    class="border border-gray-200 px-4 py-3 bg-gray-50 font-semibold text-gray-700 text-left w-[50px]">
+                                    Type</th>
+                                <th
+                                    class="border border-gray-200 px-4 py-3 bg-gray-50 font-semibold text-gray-700 text-left w-[150px]">
+                                    Reference</th>
+                                <th
+                                    class="border border-gray-200 px-4 py-3 bg-gray-50 font-semibold text-gray-700 text-left w-[100px]">
+                                    Year</th>
+                                <th
+                                    class="border border-gray-200 px-4 py-3 bg-gray-50 font-semibold text-gray-700 text-left w-[150px]">
+                                    Literature Coverage</th>
+                                <th
+                                    class="border border-gray-200 px-4 py-3 bg-gray-50 font-semibold text-gray-700 text-left">
+                                    Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="border border-gray-200 px-4 py-3 bg-blue-50 text-center align-middle"
+                                    rowspan="26">
+                                    <div class="rotate-text font-bold text-primary">XAI Surveys on Generic AI Models
+                                    </div>
+                                </td>
+                                <td class="border border-gray-200 px-4 py-3 hover:bg-blue-50 text-blue-500 underline hover:text-blue-700"><a
+                                        href="https://www.sciencedirect.com/science/article/pii/S095741742401577X"
+                                        target="_blank">abusitta2024survey</a></td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2024</td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2018-2024</td>
+                                <td class="border border-gray-200 px-4 py-3">Propose a classification of XAI techniques,
+                                    emphasizing applications in cybersecurity and future challenges</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-200 px-4 py-3 hover:bg-blue-50 text-blue-500 underline hover:text-blue-700"><a
+                                        href="https://link.springer.com/article/10.1007/S10618-022-00867-8"
+                                        target="_blank">schwalbe2024comprehensive</a></td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2024</td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2017-2024</td>
+                                <td class="border border-gray-200 px-4 py-3">Propose a unified taxonomy of XAI methods
+                                    and provide use-case-oriented insights</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-200 px-4 py-3 hover:bg-blue-50 text-blue-500 underline hover:text-blue-700"><a
+                                        href="https://link.springer.com/article/10.1007/s12559-023-10179-8"
+                                        target="_blank">hassija2024interpreting</a></td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2024</td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2016-2024</td>
+                                <td class="border border-gray-200 px-4 py-3">Review XAI models, evaluation metrics,
+                                    challenges, and trends to enhance transparency</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-200 px-4 py-3 hover:bg-blue-50 text-blue-500 underline hover:text-blue-700"><a
+                                        href="https://www.sciencedirect.com/science/article/pii/S0925231224008828"
+                                        target="_blank">mersha2024explainable</a></td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2024</td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2015-2024</td>
+                                <td class="border border-gray-200 px-4 py-3">Deliver a review of XAI, examining methods,
+                                    applications, and principles to enhance transparency</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-200 px-4 py-3 hover:bg-blue-50 text-blue-500 underline hover:text-blue-700"><a
+                                        href="https://link.springer.com/chapter/10.1007/978-3-031-65392-6_23"
+                                        target="_blank">mazhar2024survey</a></td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2024</td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2018-2023</td>
+                                <td class="border border-gray-200 px-4 py-3">Survey XAI methods for deep learning,
+                                    investigating techniques, tools, and future research directions</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-200 px-4 py-3 hover:bg-blue-50 text-blue-500 underline hover:text-blue-700"><a
+                                        href="https://dl.acm.org/doi/abs/10.1145/3675392"
+                                        target="_blank">chander2024toward</a></td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2024</td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2017-2023</td>
+                                <td class="border border-gray-200 px-4 py-3">Discuss trustworthy AI, focusing on
+                                    robustness and explainability to enhance safety and reliability</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-200 px-4 py-3 hover:bg-blue-50 text-blue-500 underline hover:text-blue-700"><a
+                                        href="https://ieeexplore.ieee.org/abstract/document/10188681/"
+                                        target="_blank">chamola2023review</a></td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2023</td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2019-2023</td>
+                                <td class="border border-gray-200 px-4 py-3">Evaluate trustworthy and explainable AI,
+                                    focusing on transparency and reliability across industries</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-200 px-4 py-3 hover:bg-blue-50 text-blue-500 underline hover:text-blue-700"><a
+                                        href="https://link.springer.com/article/10.1007/s44230-023-00038-y"
+                                        target="_blank">yang2023survey</a></td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2023</td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2017-2023</td>
+                                <td class="border border-gray-200 px-4 py-3">Review XAI research, focusing on key areas,
+                                    taxonomies, applications, and future directions</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-200 px-4 py-3 hover:bg-blue-50 text-blue-500 underline hover:text-blue-700"><a
+                                        href="https://www.sciencedirect.com/science/article/pii/S277266222300070X"
+                                        target="_blank">saranya2023systematic</a></td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2023</td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2020-2022</td>
+                                <td class="border border-gray-200 px-4 py-3">Conduct a systematic review of XAI
+                                    applications across various fields and suggest directions for future research</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-200 px-4 py-3 hover:bg-blue-50 text-blue-500 underline hover:text-blue-700"><a
+                                        href="https://www.sciencedirect.com/science/article/pii/S0950705123000230"
+                                        target="_blank">saeed2023explainable</a></td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2023</td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2017-2022</td>
+                                <td class="border border-gray-200 px-4 py-3">Conduct a systematic meta-survey of XAI
+                                    challenges and future research across development phases</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-200 px-4 py-3 hover:bg-blue-50 text-blue-500 underline hover:text-blue-700"><a
+                                        href="https://www.sciencedirect.com/science/article/pii/B9780323960984000089"
+                                        target="_blank">samek2023explainable</a></td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2023</td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2017-2022</td>
+                                <td class="border border-gray-200 px-4 py-3">Introduce XAI techniques for deep neural
+                                    networks, emphasizing challenges and future directions</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-200 px-4 py-3 hover:bg-blue-50 text-blue-500 underline hover:text-blue-700"><a
+                                        href="https://dl.acm.org/doi/abs/10.1145/3561048"
+                                        target="_blank">dwivedi2023explainable</a></td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2023</td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2017-2021</td>
+                                <td class="border border-gray-200 px-4 py-3">Survey XAI techniques, classify approaches,
+                                    and guide framework selection for interpretable AI systems</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-200 px-4 py-3 hover:bg-blue-50 text-blue-500 underline hover:text-blue-700"><a
+                                        href="https://link.springer.com/chapter/10.1007/978-3-031-04083-2_2"
+                                        target="_blank">holzinger2022explainable</a></td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2022</td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2019-2022</td>
+                                <td class="border border-gray-200 px-4 py-3">Present a concise overview of 17 key XAI
+                                    methods for beginners</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-200 px-4 py-3 hover:bg-blue-50 text-blue-500 underline hover:text-blue-700"><a
+                                        href="https://www.sciencedirect.com/science/article/pii/S0925231222012218"
+                                        target="_blank">saleem2022explaining</a></td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2022</td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2019-2022</td>
+                                <td class="border border-gray-200 px-4 py-3">Review global interpretation methods in
+                                    XAI, highlighting strengths, weaknesses, and future opportunities</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-200 px-4 py-3 hover:bg-blue-50 text-blue-500 underline hover:text-blue-700"><a
+                                        href="https://www.sciencedirect.com/science/article/pii/S002002552201132X"
+                                        target="_blank">ding2022explainability</a></td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2022</td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2016-2022</td>
+                                <td class="border border-gray-200 px-4 py-3">Discuss XAI principles, taxonomy,
+                                    evaluation, and challenges, suggesting future research directions</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-200 px-4 py-3 hover:bg-blue-50 text-blue-500 underline hover:text-blue-700"><a
+                                        href="https://www.jair.org/index.php/jair/article/view/13200"
+                                        target="_blank">ras2022explainable</a></td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2022</td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2014-2022</td>
+                                <td class="border border-gray-200 px-4 py-3">Guide readers through explainable deep
+                                    learning, discussing key methods, evaluations, and future directions</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-200 px-4 py-3 hover:bg-blue-50 text-blue-500 underline hover:text-blue-700"><a
+                                        href="https://projecteuclid.org/journals/statistics-surveys/volume-16/issue-none/Interpretable-machine-learning-Fundamental-principles-and-10-grand-challenges/10.1214/21-SS133.short"
+                                        target="_blank">rudin2022interpretable</a></td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2022</td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2013-2022</td>
+                                <td class="border border-gray-200 px-4 py-3">Identify 10 technical challenge areas and
+                                    provide historical and background context</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-200 px-4 py-3 hover:bg-blue-50 text-blue-500 underline hover:text-blue-700"><a
+                                        href="https://ieeexplore.ieee.org/abstract/document/9626294/"
+                                        target="_blank">hanif2021survey</a></td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2021</td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2017-2021</td>
+                                <td class="border border-gray-200 px-4 py-3">Survey XAI techniques, emphasizing the need
+                                    for transparent and responsible AI to build trust</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-200 px-4 py-3 hover:bg-blue-50 text-blue-500 underline hover:text-blue-700"><a
+                                        href="https://ieeexplore.ieee.org/abstract/document/9521221/"
+                                        target="_blank">zhang2021survey</a></td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2021</td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2015-2021</td>
+                                <td class="border border-gray-200 px-4 py-3">Propose a taxonomy of neural network
+                                    interpretability based on engagement, explanation type, and focus</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-200 px-4 py-3 hover:bg-blue-50 text-blue-500 underline hover:text-blue-700"><a
+                                        href="https://ieeexplore.ieee.org/abstract/document/9369420/"
+                                        target="_blank">samek2021explaining</a></td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2021</td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2014-2021</td>
+                                <td class="border border-gray-200 px-4 py-3">Offer an overview of post-hoc explanations,
+                                    evaluate interpretability methods, and demonstrate XAI applications</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-200 px-4 py-3 hover:bg-blue-50 text-blue-500 underline hover:text-blue-700"><a
+                                        href="https://arxiv.org/abs/2101.09429" target="_blank">islam2021explainable</a>
+                                </td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2021</td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2018-2020</td>
+                                <td class="border border-gray-200 px-4 py-3">Analyze XAI methods for credit default
+                                    prediction, compare advantages, and suggest future research</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-200 px-4 py-3 hover:bg-blue-50 text-blue-500 underline hover:text-blue-700"><a
+                                        href="https://ieeexplore.ieee.org/abstract/document/9380482/"
+                                        target="_blank">fan2021interpretability</a></td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2021</td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2014-2020</td>
+                                <td class="border border-gray-200 px-4 py-3">Propose a taxonomy and discuss applications
+                                    and future directions</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-200 px-4 py-3 hover:bg-blue-50 text-blue-500 underline hover:text-blue-700"><a
+                                        href="https://arxiv.org/abs/2006.11371" target="_blank">das2020opportunities</a>
+                                </td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2020</td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2017-2020</td>
+                                <td class="border border-gray-200 px-4 py-3">Deliver an overview of XAI techniques,
+                                    including taxonomy, methods, principles, and evaluation</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-200 px-4 py-3 hover:bg-blue-50 text-blue-500 underline hover:text-blue-700"><a
+                                        href="https://www.sciencedirect.com/science/article/pii/S1574013719302527"
+                                        target="_blank">huang2020survey</a></td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2020</td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2015-2020</td>
+                                <td class="border border-gray-200 px-4 py-3">Review research on making DNNs safe,
+                                    concentrating on verification, testing, attacks, and interpretability</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-200 px-4 py-3 hover:bg-blue-50 text-blue-500 underline hover:text-blue-700"><a
+                                        href="https://www.sciencedirect.com/science/article/pii/S1566253519308103"
+                                        target="_blank">arrieta2020explainable</a></td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2020</td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2007-2020</td>
+                                <td class="border border-gray-200 px-4 py-3">Explore the importance of explainability in
+                                    AI and present a taxonomy of XAI techniques</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-200 px-4 py-3 hover:bg-blue-50 text-blue-500 underline hover:text-blue-700"><a
+                                        href="https://link.springer.com/chapter/10.1007/978-3-030-49760-6_4"
+                                        target="_blank">ferreira2020people</a></td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2020</td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2018-2019</td>
+                                <td class="border border-gray-200 px-4 py-3">Explore AI explainability from CS and HCI
+                                    perspectives, concentrating on goals, recipients, and context</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="bg-gray-50 px-6 py-4 text-sm text-gray-600">
+                    <p><i class="fas fa-info-circle mr-2 text-primary"></i>This table summarizes XAI survey literature
+                        on Generic AI Models from 2020-2024, covering 26 studies</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Table 2: Vision-Related Fields -->
+    <section class="py-8 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="bg-gradient-to-r from-secondary to-cyan-600 px-6 py-4">
+                    <h2 class="text-2xl font-bold text-white">Table 2: XAI Surveys on Vision-Related Fields</h2>
+                    <p class="text-cyan-100 mt-1">Summary and comparison of recent XAI surveys on specific
+                        vision-related fields</p>
+                </div>
+                <div class="table-container p-4">
+                    <table class="min-w-full border-collapse">
+                        <thead class="sticky-header bg-gray-100">
+                            <tr>
+                                <th
+                                    class="border border-gray-200 px-4 py-3 bg-gray-50 font-semibold text-gray-700 text-left w-[150px]">
+                                    Type</th>
+                                <th
+                                    class="border border-gray-200 px-4 py-3 bg-gray-50 font-semibold text-gray-700 text-left w-[150px]">
+                                    Reference</th>
+                                <th
+                                    class="border border-gray-200 px-4 py-3 bg-gray-50 font-semibold text-gray-700 text-left w-[100px]">
+                                    Year</th>
+                                <th
+                                    class="border border-gray-200 px-4 py-3 bg-gray-50 font-semibold text-gray-700 text-left w-[150px]">
+                                    Literature Coverage</th>
+                                <th
+                                    class="border border-gray-200 px-4 py-3 bg-gray-50 font-semibold text-gray-700 text-left">
+                                    Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Visual Task -->
+                            <tr>
+                                <td class="border border-gray-200 px-4 py-3 bg-cyan-50 font-semibold text-center align-middle"
+                                    rowspan="3">Visual Task</td>
+                                <td class="border border-gray-200 px-4 py-3 hover:bg-cyan-50 text-blue-500 underline hover:text-blue-700"><a
+                                        href="https://www.sciencedirect.com/science/article/pii/S2405959524001115"
+                                        target="_blank">gipivskis2024explainable</a></td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2024</td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2017-2024</td>
+                                <td class="border border-gray-200 px-4 py-3">Survey XAI in semantic segmentation,
+                                    categorizing evaluation metrics and future challenges</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-200 px-4 py-3 hover:bg-cyan-50 text-blue-500 underline hover:text-blue-700"><a
+                                        href="https://arxiv.org/abs/2312.12936" target="_blank">poeta2023concept</a>
+                                </td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2023</td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2018-2023</td>
+                                <td class="border border-gray-200 px-4 py-3">Review concept-based XAI methods, offering
+                                    taxonomy, guidelines, and evaluations for the future</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-200 px-4 py-3 hover:bg-cyan-50 text-blue-500 underline hover:text-blue-700"><a
+                                        href="https://www.sciencedirect.com/science/article/pii/S0031320321002892"
+                                        target="_blank">bai2021explainable</a></td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2021</td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2015-2021</td>
+                                <td class="border border-gray-200 px-4 py-3">Introduce papers on explainable deep
+                                    learning, efficiency, and robustness in pattern recognition</td>
+                            </tr>
+                            <!-- Visualization -->
+                            <tr>
+                                <td class="border border-gray-200 px-4 py-3 bg-cyan-50 font-semibold text-center align-middle"
+                                    rowspan="3">Visualization</td>
+                                <td class="border border-gray-200 px-4 py-3 hover:bg-cyan-50 text-blue-500 underline hover:text-blue-700"><a
+                                        href="https://www.sciencedirect.com/science/article/pii/S1566253524000812"
+                                        target="_blank">baniecki2024adversarial</a></td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2024</td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2017-2024</td>
+                                <td class="border border-gray-200 px-4 py-3">Survey adversarial attacks on XAI,
+                                    outlining security challenges and suggesting future directions</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-200 px-4 py-3 hover:bg-cyan-50 text-blue-500 underline hover:text-blue-700"><a
+                                        href="https://www.sciencedirect.com/science/article/pii/S0097849321001886"
+                                        target="_blank">alicioglu2022survey</a></td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2022</td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2018-2021</td>
+                                <td class="border border-gray-200 px-4 py-3">Review trends and challenges in visual
+                                    analytics for XAI, focusing on deep learning model interpretation</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-200 px-4 py-3 hover:bg-cyan-50 text-blue-500 underline hover:text-blue-700"><a
+                                        href="https://link.springer.com/chapter/10.1007/978-3-319-54024-5_6"
+                                        target="_blank">seifert2017visualizations</a></td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2017</td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2014-2016</td>
+                                <td class="border border-gray-200 px-4 py-3">Survey visualization methods for DNNs,
+                                    focusing on insights gained in computer vision</td>
+                            </tr>
+                            <!-- Architecture -->
+                            <tr>
+                                <td class="border border-gray-200 px-4 py-3 bg-cyan-50 font-semibold text-center align-middle"
+                                    rowspan="3">Architecture</td>
+                                <td class="border border-gray-200 px-4 py-3 hover:bg-cyan-50 text-blue-500 underline hover:text-blue-700"><a
+                                        href="https://www.mdpi.com/2073-431X/13/4/92"
+                                        target="_blank">fantozzi2024explainability</a></td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2024</td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2017-2024</td>
+                                <td class="border border-gray-200 px-4 py-3">Survey transformer explainability,
+                                    categorizing by components, applications, and visualization</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-200 px-4 py-3 hover:bg-cyan-50 text-blue-500 underline hover:text-blue-700"><a
+                                        href="https://arxiv.org/abs/2311.06786"
+                                        target="_blank">kashefi2023explainability</a></td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2023</td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2021-2023</td>
+                                <td class="border border-gray-200 px-4 py-3">Review explainability methods for vision
+                                    transformers, categorizing approaches and evaluation criteria</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-200 px-4 py-3 hover:bg-cyan-50 text-blue-500 underline hover:text-blue-700"><a
+                                        href="https://www.mdpi.com/2079-9292/13/1/175"
+                                        target="_blank">stassin2023explainability</a></td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2023</td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2019-2023</td>
+                                <td class="border border-gray-200 px-4 py-3">Evaluate XAI for vision transformers,
+                                    highlighting challenges in metrics, convergence, and adaptation</td>
+                            </tr>
+                            <!-- Multimodal -->
+                            <tr>
+                                <td class="border border-gray-200 px-4 py-3 bg-cyan-50 font-semibold text-center align-middle"
+                                    rowspan="4">Multimodal</td>
+                                <td class="border border-gray-200 px-4 py-3 hover:bg-cyan-50 text-blue-500 underline hover:text-blue-700"><a
+                                        href="https://arxiv.org/abs/2501.12203"
+                                        target="_blank">kazmierczak2025explainability</a></td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2025</td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2017-2025</td>
+                                <td class="border border-gray-200 px-4 py-3">Survey integration of foundation models
+                                    with explainable AI in the vision domain</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-200 px-4 py-3 hover:bg-cyan-50 text-blue-500 underline hover:text-blue-700"><a
+                                        href="https://arxiv.org/abs/2412.02104" target="_blank">dang2024explainable</a>
+                                </td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2024</td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2017-2024</td>
+                                <td class="border border-gray-200 px-4 py-3">Survey interpretability of MLLMs,
+                                    categorizing evaluations and future directions</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-200 px-4 py-3 hover:bg-cyan-50 text-blue-500 underline hover:text-blue-700"><a
+                                        href="https://ieeexplore.ieee.org/abstract/document/10689601/"
+                                        target="_blank">rodis2024multimodal</a></td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2024</td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2016-2024</td>
+                                <td class="border border-gray-200 px-4 py-3">Analyze recent advances in Multimodal XAI,
+                                    focusing on methods, datasets, and evaluation metrics</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-200 px-4 py-3 hover:bg-cyan-50 text-blue-500 underline hover:text-blue-700"><a
+                                        href="https://arxiv.org/abs/2412.14056" target="_blank">sun2024review</a></td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2024</td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2015-2024</td>
+                                <td class="border border-gray-200 px-4 py-3">Review research on interpretability of
+                                    MLLMs, focusing on challenges, metrics, and future directions</td>
+                            </tr>
+                            <!-- Reinforcement Learning -->
+                            <tr>
+                                <td class="border border-gray-200 px-4 py-3 bg-cyan-50 font-semibold text-center align-middle"
+                                    rowspan="4">Reinforcement Learning</td>
+                                <td class="border border-gray-200 px-4 py-3 hover:bg-cyan-50 text-blue-500 underline hover:text-blue-700"><a
+                                        href="https://dl.acm.org/doi/abs/10.1145/3616864"
+                                        target="_blank">milani2024explainable</a></td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2024</td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2017-2024</td>
+                                <td class="border border-gray-200 px-4 py-3">Survey XRL techniques, introduce a
+                                    taxonomy, and outline challenges and future directions</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-200 px-4 py-3 hover:bg-cyan-50 text-blue-500 underline hover:text-blue-700"><a
+                                        href="https://link.springer.com/article/10.1007/s10994-024-06543-w"
+                                        target="_blank">glanois2024survey</a></td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2024</td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2015-2024</td>
+                                <td class="border border-gray-200 px-4 py-3">Survey interpretability approaches in
+                                    reinforcement learning, focusing on inputs, models, and decisions</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-200 px-4 py-3 hover:bg-cyan-50 text-blue-500 underline hover:text-blue-700"><a
+                                        href="https://link.springer.com/article/10.1007/s00521-023-08423-1"
+                                        target="_blank">dazeley2023explainable</a></td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2023</td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2015-2023</td>
+                                <td class="border border-gray-200 px-4 py-3">Introduce the Causal XRL Framework, unify
+                                    XRL research, and explore future Broad-XAI development</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-200 px-4 py-3 hover:bg-cyan-50 text-blue-500 underline hover:text-blue-700"><a
+                                        href="https://link.springer.com/chapter/10.1007/978-3-030-57321-8_5"
+                                        target="_blank">puiutta2020explainable</a></td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2020</td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2017-2019</td>
+                                <td class="border border-gray-200 px-4 py-3">Survey XRL methods and highlight the need
+                                    for interdisciplinary human-centered explanations</td>
+                            </tr>
+                            <!-- Others -->
+                            <tr>
+                                <td class="border border-gray-200 px-4 py-3 bg-cyan-50 font-semibold text-center align-middle"
+                                    rowspan="4">Others</td>
+                                <td class="border border-gray-200 px-4 py-3 hover:bg-cyan-50 text-blue-500 underline hover:text-blue-700"><a
+                                        href="https://arxiv.org/abs/2409.00743" target="_blank">hu2024interpretable</a>
+                                </td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2024</td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2021-2024</td>
+                                <td class="border border-gray-200 px-4 py-3">Review explainable clustering methods,
+                                    emphasizing transparency and ethics in high-stakes applications</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-200 px-4 py-3 hover:bg-cyan-50 text-blue-500 underline hover:text-blue-700"><a
+                                        href="https://link.springer.com/article/10.1007/s10462-024-10916-x"
+                                        target="_blank">schneider2024explainable</a></td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2024</td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2019-2024</td>
+                                <td class="border border-gray-200 px-4 py-3">Review XAI in generative AI, addressing
+                                    challenges, categories, criteria, and future research directions</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-200 px-4 py-3 hover:bg-cyan-50 text-blue-500 underline hover:text-blue-700"><a
+                                        href="https://www.jair.org/index.php/jair/article/view/12228"
+                                        target="_blank">burkart2021survey</a></td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2021</td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2015-2021</td>
+                                <td class="border border-gray-200 px-4 py-3">Survey explainable supervised learning
+                                    methods, highlighting principles, methodologies, and directions</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-200 px-4 py-3 hover:bg-cyan-50 text-blue-500 underline hover:text-blue-700"><a
+                                        href="https://ieeexplore.ieee.org/abstract/document/9050829/"
+                                        target="_blank">li2020survey</a></td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2020</td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2015-2020</td>
+                                <td class="border border-gray-200 px-4 py-3">Survey explanation methods, focusing on
+                                    data-driven and knowledge-aware approaches, and applications</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="bg-gray-50 px-6 py-4 text-sm text-gray-600">
+                    <p><i class="fas fa-info-circle mr-2 text-secondary"></i>This table summarizes XAI survey literature
+                        on Vision-Related Fields from 2020-2025, covering 21 studies</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Table 3: Vision-Related Applications -->
+    <section class="py-8 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="bg-gradient-to-r from-accent to-indigo-600 px-6 py-4">
+                    <h2 class="text-2xl font-bold text-white">Table 3: XAI Surveys on Vision-Related Applications</h2>
+                    <p class="text-indigo-100 mt-1">Summary and comparison of recent XAI surveys on vision-related
+                        applications</p>
+                </div>
+                <div class="table-container p-4">
+                    <table class="min-w-full border-collapse">
+                        <thead class="sticky-header bg-gray-100">
+                            <tr>
+                                <th
+                                    class="border border-gray-200 px-4 py-3 bg-gray-50 font-semibold text-gray-700 text-left w-[150px]">
+                                    Type</th>
+                                <th
+                                    class="border border-gray-200 px-4 py-3 bg-gray-50 font-semibold text-gray-700 text-left w-[150px]">
+                                    Reference</th>
+                                <th
+                                    class="border border-gray-200 px-4 py-3 bg-gray-50 font-semibold text-gray-700 text-left w-[100px]">
+                                    Year</th>
+                                <th
+                                    class="border border-gray-200 px-4 py-3 bg-gray-50 font-semibold text-gray-700 text-left w-[150px]">
+                                    Literature Coverage</th>
+                                <th
+                                    class="border border-gray-200 px-4 py-3 bg-gray-50 font-semibold text-gray-700 text-left">
+                                    Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Medical Imaging -->
+                            <tr>
+                                <td class="border border-gray-200 px-4 py-3 bg-indigo-50 font-semibold text-center align-middle"
+                                    rowspan="11">Medical Imaging</td>
+                                <td class="border border-gray-200 px-4 py-3 hover:bg-indigo-50 text-blue-500 underline hover:text-blue-700"><a
+                                        href="https://www.mdpi.com/2313-433X/10/10/239"
+                                        target="_blank">bhati2024survey</a></td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2024</td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2017-2024</td>
+                                <td class="border border-gray-200 px-4 py-3">Survey interpretability and visualization
+                                    techniques for deep learning in medical imaging</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-200 px-4 py-3 hover:bg-indigo-50 text-blue-500 underline hover:text-blue-700"><a
+                                        href="https://arxiv.org/abs/2410.02331" target="_blank">hou2024self</a></td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2024</td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2017-2024</td>
+                                <td class="border border-gray-200 px-4 py-3">Survey self-explainable AI for medical
+                                    image analysis: methods, challenges, and future research</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-200 px-4 py-3 hover:bg-indigo-50 text-blue-500 underline hover:text-blue-700"><a
+                                        href="https://www.annualreviews.org/content/journals/10.1146/annurev-pathmechdis-051222-113147"
+                                        target="_blank">klauschen2024toward</a></td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2024</td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2015-2023</td>
+                                <td class="border border-gray-200 px-4 py-3">Explore diagnostic pathology:
+                                    classification, biomarker quantification, transparency, XAI solutions</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-200 px-4 py-3 hover:bg-indigo-50 text-blue-500 underline hover:text-blue-700"><a
+                                        href="https://www.sciencedirect.com/science/article/pii/S0720048X23001006"
+                                        target="_blank">borys2023explainable</a></td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2023</td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2020-2022</td>
+                                <td class="border border-gray-200 px-4 py-3">Review non-saliency XAI methods in medical
+                                    imaging for clinicians</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-200 px-4 py-3 hover:bg-indigo-50 text-blue-500 underline hover:text-blue-700"><a
+                                        href="https://www.mdpi.com/1424-8220/23/2/634"
+                                        target="_blank">chaddad2023survey</a></td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2023</td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2019-2022</td>
+                                <td class="border border-gray-200 px-4 py-3">Survey XAI techniques, categorize
+                                    challenges, and suggest future directions in medical imaging</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-200 px-4 py-3 hover:bg-indigo-50 text-blue-500 underline hover:text-blue-700"><a
+                                        href="https://www.sciencedirect.com/science/article/pii/S0010482523001336"
+                                        target="_blank">nazir2023survey</a></td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2023</td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2017-2022</td>
+                                <td class="border border-gray-200 px-4 py-3">Survey XAI for medical imaging diagnostics,
+                                    analyze challenges, and propose future directions</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-200 px-4 py-3 hover:bg-indigo-50 text-blue-500 underline hover:text-blue-700"><a
+                                        href="https://www.mdpi.com/1424-8220/22/20/8068"
+                                        target="_blank">sheu2022survey</a></td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2022</td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2018-2022</td>
+                                <td class="border border-gray-200 px-4 py-3">Survey medical XAI: evaluations, case
+                                    studies, human-machine collaboration, and the future</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-200 px-4 py-3 hover:bg-indigo-50 text-blue-500 underline hover:text-blue-700"><a
+                                        href="https://link.springer.com/article/10.1007/s00530-022-00960-4"
+                                        target="_blank">teng2022survey</a></td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2022</td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2019-2021</td>
+                                <td class="border border-gray-200 px-4 py-3">Review interpretability in medical
+                                    diagnosis: methods, applications, challenges, and future directions</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-200 px-4 py-3 hover:bg-indigo-50 text-blue-500 underline hover:text-blue-700"><a
+                                        href="https://wires.onlinelibrary.wiley.com/doi/abs/10.1002/wsbm.1548"
+                                        target="_blank">jin2022explainable</a></td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2022</td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2016-2021</td>
+                                <td class="border border-gray-200 px-4 py-3">Review interpretability in healthcare:
+                                    methods, advantages, applications, and future directions</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-200 px-4 py-3 hover:bg-indigo-50 text-blue-500 underline hover:text-blue-700"><a
+                                        href="https://ieeexplore.ieee.org/abstract/document/9233366/"
+                                        target="_blank">tjoa2020survey</a></td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2020</td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2015-2020</td>
+                                <td class="border border-gray-200 px-4 py-3">Categorize AI interpretability approaches
+                                    to guide cautious application in medical practices</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-200 px-4 py-3 hover:bg-indigo-50 text-blue-500 underline hover:text-blue-700"><a
+                                        href="https://link.springer.com/chapter/10.1007/978-3-030-50402-1_4"
+                                        target="_blank">pocevivciute2020survey</a></td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2020</td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2015-2020</td>
+                                <td class="border border-gray-200 px-4 py-3">Survey XAI in digital pathology:
+                                    techniques, uncertainty estimation, and cross-disciplinary insights</td>
+                            </tr>
+                            <!-- Industry/Manufacturing -->
+                            <tr>
+                                <td class="border border-gray-200 px-4 py-3 bg-indigo-50 font-semibold text-center align-middle"
+                                    rowspan="4">Industry/Manufacturing</td>
+                                <td class="border border-gray-200 px-4 py-3 hover:bg-indigo-50 text-blue-500 underline hover:text-blue-700"><a
+                                        href="https://link.springer.com/article/10.1007/s10845-023-02304-z"
+                                        target="_blank">naqvi2024survey</a></td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2024</td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2001-2023</td>
+                                <td class="border border-gray-200 px-4 py-3">Survey ontology-based and semantic-based
+                                    XAI for transparent AI decisions in manufacturing</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-200 px-4 py-3 hover:bg-indigo-50 text-blue-500 underline hover:text-blue-700"><a
+                                        href="https://ieeexplore.ieee.org/abstract/document/10449717/"
+                                        target="_blank">alexander2024interrogative</a></td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2024</td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2020-2022</td>
+                                <td class="border border-gray-200 px-4 py-3">Survey explainable AI applications in
+                                    manufacturing, highlight research, and propose future directions</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-200 px-4 py-3 hover:bg-indigo-50 text-blue-500 underline hover:text-blue-700"><a
+                                        href="https://dl.acm.org/doi/abs/10.1145/3609333"
+                                        target="_blank">li2023survey</a></td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2023</td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2016-2023</td>
+                                <td class="border border-gray-200 px-4 py-3">Survey explainable anomaly detection:
+                                    techniques, taxonomy, ethics, and guidance for practitioners</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-200 px-4 py-3 hover:bg-indigo-50 text-blue-500 underline hover:text-blue-700"><a
+                                        href="https://ieeexplore.ieee.org/abstract/document/9695219/"
+                                        target="_blank">ahmed2022artificial</a></td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2022</td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2018-2021</td>
+                                <td class="border border-gray-200 px-4 py-3">Survey AI and XAI methods in Industry 4.0
+                                    for autonomous decision-making and transparency</td>
+                            </tr>
+                            <!-- Smart City -->
+                            <tr>
+                                <td class="border border-gray-200 px-4 py-3 bg-indigo-50 font-semibold text-center align-middle"
+                                    rowspan="3">Smart City</td>
+                                <td class="border border-gray-200 px-4 py-3 hover:bg-indigo-50 text-blue-500 underline hover:text-blue-700"><a
+                                        href="https://www.mdpi.com/2079-9292/12/4/1020"
+                                        target="_blank">javed2023survey</a></td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2023</td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2018-2023</td>
+                                <td class="border border-gray-200 px-4 py-3">Survey XAI developments in smart cities,
+                                    focusing on use cases, challenges, and research directions</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-200 px-4 py-3 hover:bg-indigo-50 text-blue-500 underline hover:text-blue-700"><a
+                                        href="https://ieeexplore.ieee.org/abstract/document/10158334/"
+                                        target="_blank">kok2023explainable</a></td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2023</td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2018-2023</td>
+                                <td class="border border-gray-200 px-4 py-3">Examine XAI in IoT: transparent models,
+                                    challenges, foresee future directions, and classify studies</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-200 px-4 py-3 hover:bg-indigo-50 text-blue-500 underline hover:text-blue-700"><a
+                                        href="https://ieeexplore.ieee.org/abstract/document/9930971/"
+                                        target="_blank">jagatheesaperumal2022explainable</a></td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2022</td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2018-2022</td>
+                                <td class="border border-gray-200 px-4 py-3">Study XAI in IoT: assess frameworks,
+                                    security, IoMT, IIoT, IoCT, edge XAI, and future directions</td>
+                            </tr>
+                            <!-- Cybersecurity -->
+                            <tr>
+                                <td class="border border-gray-200 px-4 py-3 bg-indigo-50 font-semibold text-center align-middle"
+                                    rowspan="3">Cybersecurity</td>
+                                <td class="border border-gray-200 px-4 py-3 hover:bg-indigo-50 text-blue-500 underline hover:text-blue-700"><a
+                                        href="https://ieeexplore.ieee.org/abstract/document/10143992/"
+                                        target="_blank">rjoub2023survey</a></td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2023</td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2020-2023</td>
+                                <td class="border border-gray-200 px-4 py-3">Survey XAI in cybersecurity: approaches,
+                                    challenges, limitations, and future research directions</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-200 px-4 py-3 hover:bg-indigo-50 text-blue-500 underline hover:text-blue-700"><a
+                                        href="https://link.springer.com/article/10.1007/s12243-022-00926-7"
+                                        target="_blank">charmet2022explainable</a></td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2022</td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2018-2022</td>
+                                <td class="border border-gray-200 px-4 py-3">Survey XAI in cybersecurity: applications,
+                                    security concerns, challenges, and future directions</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-200 px-4 py-3 hover:bg-indigo-50 text-blue-500 underline hover:text-blue-700"><a
+                                        href="https://ieeexplore.ieee.org/abstract/document/9877919/"
+                                        target="_blank">capuano2022explainable</a></td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2022</td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2018-2022</td>
+                                <td class="border border-gray-200 px-4 py-3">Conduct in-depth study on XAI in
+                                    cybersecurity: applications, challenges, methods, and the future</td>
+                            </tr>
+                            <!-- Others -->
+                            <tr>
+                                <td class="border border-gray-200 px-4 py-3 bg-indigo-50 font-semibold text-center align-middle"
+                                    rowspan="2">Others</td>
+                                <td class="border border-gray-200 px-4 py-3 hover:bg-indigo-50 text-blue-500 underline hover:text-blue-700">hohl2024opening</td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2024</td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2017-2024</td>
+                                <td class="border border-gray-200 px-4 py-3">Perform systematic review of XAI methods,
+                                    trends, and challenges in Remote Sensing</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-200 px-4 py-3 hover:bg-indigo-50 text-blue-500 underline hover:text-blue-700"><a
+                                        href="https://ieeexplore.ieee.org/abstract/document/10459028/"
+                                        target="_blank">alizadehsani2024explainable</a></td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2024</td>
+                                <td class="border border-gray-200 px-4 py-3 text-center">2020-2023</td>
+                                <td class="border border-gray-200 px-4 py-3">Review XAI methods in drug discovery,
+                                    identify challenges, applications, and future directions</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="bg-gray-50 px-6 py-4 text-sm text-gray-600">
+                    <p><i class="fas fa-info-circle mr-2 text-accent"></i>This table summarizes XAI survey literature on
+                        Vision Applications from 2020-2025, covering 23 studies</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-dark to-gray-900 text-white py-8 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center">
+                <h3 class="text-xl font-bold mb-4">Related Surveys of <i>A Survey on Interpretability in Visual
+                        Recognition</i></h3>
+                <p class="text-gray-300 max-w-3xl mx-auto">
+                    Qiyang Wan, Chengzhi Gao, Ruiping Wang, Xilin Chen
+                </p>
+                <!-- <div class="mt-6 flex justify-center space-x-6">
+                    <a href="#" class="text-gray-300 hover:text-white">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-300 hover:text-white">
+                        <i class="fas fa-file-pdf text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-300 hover:text-white">
+                        <i class="fas fa-book text-xl"></i>
+                    </a>
+                </div> -->
+                <div class="mt-6 pt-6 border-t border-gray-800 text-sm text-gray-400">
+                    <p>© 2025 Institute of Computing Technology, Chinese Academy of Sciences | Academic Use</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
